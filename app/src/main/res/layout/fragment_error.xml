@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+   >
+
+    <data>
+
+        <variable
+            name="callback"
+            type="com.gulshankumar.go_weather.viewModels.FragmentViewModel.FragmentClickCallbacks"/>
+
+        <variable
+            name="error_view_model"
+            type="com.gulshankumar.go_weather.viewModels.FragmentViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.fragments.ErrorFragment"
+        android:background="@color/colorErrorScreenBg">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="54sp"
+        android:layout_marginTop="150dp"
+        android:id="@+id/tv_error_mesg"
+        android:gravity="center"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/colorTextWhite"
+        android:text="@{error_view_model.errorMesg}"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_marginTop="44dp"
+        android:onClick="@{() -> error_view_model.onErrorClick(callback)}"
+        android:text="@string/retry_btn_txt"
+        android:textColor="@color/colorTextWhite"
+        android:background="@color/colorButtonDark"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_error_mesg"
+        android:layout_height="wrap_content" />
+    </RelativeLayout>
+</layout>

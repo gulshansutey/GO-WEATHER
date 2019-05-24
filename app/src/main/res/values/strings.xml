@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GO-WEATHER</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="retry_btn_txt">Retry</string>
+    <string name="error_mesg_txt">Something went wrong at our end!</string>
+</resources>

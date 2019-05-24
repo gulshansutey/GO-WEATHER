@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <data>
+
+        <variable
+            name="position"
+            type="java.lang.Integer" />
+
+        <variable
+            name="adp_view_model"
+            type="com.gulshankumar.go_weather.viewModels.FragmentViewModel"/>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="@{adp_view_model.getForecastDayName(position)}"
+            android:id="@+id/tv_day_of_week"
+            android:textSize="16sp"
+
+            android:layout_centerVertical="true"
+            android:fontFamily="sans-serif"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="@{adp_view_model.getForecastDayTemp(position)}"
+            android:id="@+id/tv_temperature"
+            android:textSize="16sp"
+            android:layout_centerVertical="true"
+            android:fontFamily="sans-serif"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+</layout>
